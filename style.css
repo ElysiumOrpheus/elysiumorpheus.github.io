@@ -6,50 +6,52 @@
     font-style: normal;
 }
 
-/* Apply the custom font globally */
+/* Main body styling with the background image */
 body {
     font-family: 'JBM', sans-serif;
-    background-image: url('images/two_forests_everforest.png'); /* Background image */
+    background-image: url('images/two_forests_everforest.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Ensure it covers the full viewport height */
-    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    position: relative; /* Set the body to be a parent for positioning elements inside */
+    position: relative; /* Make it the parent of the GIF */
+    overflow: hidden; /* Prevents scrollbars from appearing */
 }
 
-/* Overlay for the semi-transparent background GIF */
-.background-overlay {
-    background-image: url('images/background.gif'); /* Foreground GIF */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Styling for the opaque GIF overlay */
+#gif-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5; /* Adjust transparency (0 is fully transparent, 1 is fully opaque) */
-    z-index: 1; /* Ensures it stays above the body background */
+    background-image: url('images/background.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust this value to control opacity */
+    pointer-events: none; /* Ensures the GIF doesn't block any interactions */
+    z-index: 1; /* Places the GIF in front of the forest image but behind content */
 }
 
-/* Content styling */
+/* Ensure that the content stays on top of both images */
 .content {
-    position: relative; /* Ensures the content stays above the GIF overlay */
+    position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px;
 }
 
 h1, h2, p {
     margin: 20px;
-    text-align: center;
     color: white;
 }
 
+/* Button styling */
 button {
     font-family: 'JBM', sans-serif;
     background-color: #333;
