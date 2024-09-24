@@ -1,67 +1,125 @@
-/* Importing the custom font */
 @font-face {
-    font-family: 'JBM';
-    src: url('fonts/jbm.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'jbm';
+  src: url('jbm.woff2');
 }
 
-/* Main body styling with the background image */
+html {
+  background-image: url('images/background.png'); /* Repeated background image */
+  background-repeat: repeat;
+  background-size: 40px 40px; /* Adjust the size of the background images to be small */
+  color: #d3c6aa;
+  font-family: 'jbm';
+}
+
 body {
-    font-family: 'JBM', sans-serif;
-    background-image: url('images/two_forests_everforest.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative; /* Make it the parent of the GIF */
-    overflow: hidden; /* Prevents scrollbars from appearing */
+  margin: 0;
 }
 
-/* Styling for the opaque GIF overlay */
-#gif-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/background.gif');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Adjust this value to control opacity */
-    pointer-events: none; /* Ensures the GIF doesn't block any interactions */
-    z-index: 1; /* Places the GIF in front of the forest image but behind content */
+/* unvisited link */
+a:link {
+  color: #7fbbb3;
+}
+a:visited {
+  color: #83c092;
+}
+a:hover {
+  color: #d699b6;
+}
+a:active {
+  color: #e67e80;
 }
 
-/* Ensure that the content stays on top of both images */
-.content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
+/* Overlaying two_forests_everforest.png with vertical repetition */
+.bg {
+  background-image: url('images/two_forests_everforest.png'); /* Overlay image */
+  background-repeat: repeat-y; /* Repeat vertically */
+  background-size: 100% 200%; /* Adjust size of the overlay image */
+  mix-blend-mode: overlay; /* Overlay blend mode to blend with the background below */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
 }
 
-h1, h2, p {
-    margin: 20px;
-    color: white;
+.container { /* Layout styling */
+  max-width: 768px;
+  margin: 10px auto;
+  padding: 0 10px;
 }
 
-/* Button styling */
-button {
-    font-family: 'JBM', sans-serif;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.paragraph {
+  border: 5px solid #a7c080;
+  padding: 15px;
+  margin-bottom: 20px; 
+  position: relative;
+  background-color: #323c41;
+  overflow: hidden;
+  box-shadow: 8px 8px #3a454a;
 }
 
-button:hover {
-    background-color: #555;
+@keyframes marquee-veryfast {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-veryfast {
+  width: 100%;
+  animation: marquee-veryfast 10s linear infinite;
+}
+
+.yellow {
+  color: #dbbc7f;
+}
+
+#navigation {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+p, h1, h2, h3 {
+  margin: 0%;
+}
+
+#john {
+  margin: 0% auto;
+  box-shadow: 8px 8px #3a454a;
+}
+
+#mante table {
+  width: 100%;
+}
+#mante tbody tr .webring-prev {
+  width: 25%;
+  text-align: right;
+}
+#mante tbody tr .webring-info {
+  width: 50%;
+  text-align: center;
+}
+#mante tbody tr .webring-next {
+  width: 25%;
+  text-align: left;
+}
+#mante { 
+  border: solid 1px #003621;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 2px 2px #63b695;
+  padding: 8px; 
+  color: #003621; 
+  background-color: #e0ffe8;
+}
+#mante a {
+  color: #003621;
+  text-decoration-color: #00824f;
+}
+#mante a:hover {
+  color: #00824f;
 }
