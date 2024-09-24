@@ -1,76 +1,71 @@
-@font-face {
-  font-family: 'jbm';
-  src: url('fonts/jbm.woff2');
-}
-
-html, body {
+/* General styling */
+body, html {
   margin: 0;
   padding: 0;
-  background-image: url('images/bg.gif');
-  background-size: 40px 40px;
-  background-repeat: repeat;
-  color: #d3c6aa;
-  font-family: 'jbm', sans-serif;
   height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #7fbbb3;
-}
-a:visited {
-  color: #83c092;
-}
-a:hover {
-  color: #d699b6;
-}
-a:active {
-  color: #e67e80;
-}
-
+/* Container to hold content */
 .container {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 20px;
   position: relative;
-}
-
-.header {
+  z-index: 2; /* Ensures that the content is above the background */
   text-align: center;
-  padding: 50px 0;
-  background: #282c34;
-  color: #d3c6aa;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
-h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-p {
-  line-height: 1.8;
-  font-size: 1.2em;
-}
-
+/* Background styles */
 .bg {
-  background-image: url('images/two_forests_everforest.png');
-  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.15;
-  z-index: -1;
+  z-index: 1; /* Ensure background is below the content */
+  
+  background-image: url('two_forests_everforest.png');
+  background-size: cover;
+  background-position: center;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #282c34;
-  color: #d3c6aa;
+.bg::before {
+  content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  
+  background-image: url('background.gif');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust this value to control transparency */
+}
+
+header {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.6); /* A bit of transparency for header background */
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent footer background */
+  padding: 20px;
+}
+
+section {
+  padding: 40px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #3a3a3a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #5a5a5a;
 }
