@@ -82,11 +82,3 @@ p {
   bottom: 0;
   width: 100%;
 }
-
-img {
-  opacity: 0.5;
-}
-
-img:hover {
-  opacity: 1.0;
-}
