@@ -1,28 +1,24 @@
-@font-face {
-  font-family: 'jbm';
-  src: url('fonts/jbm.woff2');
-}
-
 html, body {
-  position: relative; /* Added for positioning the pseudo-element */
   margin: 0;
   padding: 0;
   color: #d3c6aa;
   font-family: 'jbm', sans-serif;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-html::before {
-  content: "";
-  position: absolute;
+body::before {
+  content: '';
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('images/background.gif');
-  background-repeat: repeat;
   background-size: 40px 40px;
-  opacity: 0.5; /* Adjust transparency here */
+  background-repeat: repeat;
+  opacity: 0.5; /* Adjust the transparency level here */
   z-index: -1;
 }
 
@@ -85,4 +81,12 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
 }
