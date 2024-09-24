@@ -1,30 +1,127 @@
-/* Importing the custom font */
 @font-face {
-    font-family: 'JBM';
-    src: url('fonts/jbm.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family:            'jbm';
+  src:                    url('jbm.woff2');
 }
-
-/* Apply the custom font globally */
+html {
+  background-image:       url('images/bg.gif');
+  background-repeat:      repeat;
+  background-size:        40px 40px;
+  color:                  #d3c6aa;
+  font-family:            'jbm';
+}
 body {
-    font-family: 'JBM', sans-serif;
-    background-image: url('images/background.jpg'); /* Ensure correct path */
-    background-size: cover; /* Ensures the background covers the entire page */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Ensures the background takes up the full viewport height */
-    width: 100vw; /* Ensures it covers the full viewport width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Adjust text color for better contrast against the background */
+  margin:                 0 0;
 }
 
-h1, h2, p {
-    margin: 20px;
-    text-align: center;
-    color: white;
+
+/* unvisited link */
+a:link {
+  color:                  #7fbbb3;
+}
+a:visited {
+  color:                  #83c092;
+}
+a:hover {
+  color:                  #d699b6;
+}
+a:active {
+  color:                  #e67e80;
+}
+
+.bg { 
+  background-image:       url('images/two_forests_everforest.png');
+  background-repeat:      repeat-y;
+  background-size:        100% 200%;
+  mix-blend-mode:         overlay;
+  position:               fixed;
+  top:                    0;
+  bottom:                 0;
+  left:                   0;
+  right:                  0;
+  z-index:                -10;
+}
+
+.container { /* stolen from bucketfish.me */
+  max-width:              768px;
+  margin:                 10px auto;
+  padding:                0 10px;
+}
+
+.paragraph {
+  border:                 5px solid #a7c080;
+  padding:                15px;
+  margin-bottom:          20px; 
+  position:               relative;
+  background-color:       #323c41;
+  overflow:               hidden;
+  box-shadow:             8px 8px #3a454a;
+}
+
+@keyframes marquee-veryfast {
+  0% {
+    -moz-transform:       translateX(100%);
+    -webkit-transform:    translateX(100%);
+    transform:            translateX(100%);
+  }
+  100% {
+    -moz-transform:       translateX(-100%);
+    -webkit-transform:    translateX(-100%);
+    transform:            translateX(-100%);
+  }
+}
+
+.marquee-veryfast {
+  width:                  100%;
+  animation:              marquee-veryfast 10s linear infinite;
+}
+
+.yellow {
+  color:                  #dbbc7f;
+}
+
+#navigation {
+  position:               absolute;
+  top:                    15px;
+  right:                  15px;
+}
+
+p, h1, h2, h3 {
+  margin:                 0%;
+}
+
+#john {
+  margin:                 0% auto;
+  box-shadow:             8px 8px #3a454a;
+}
+
+#mante table {
+  width:                  100%;
+}
+#mante tbody tr .webring-prev {
+  width:                  25%;
+  text-align:             right;
+}
+#mante tbody tr .webring-info {
+  width:                  50%;
+  text-align:             center;
+}
+#mante tbody tr .webring-next {
+  width:                  25%;
+  text-align:             left;
+}
+#mante {          /* stolen from cvni1981.github.io */
+  border:                 solid 1px #003621;
+  border-radius:          8px;
+  margin-bottom:          8px;
+  box-shadow:             2px 2px #63b695;
+  padding:                8px; 
+  color:                  #003621; 
+  background-color:       #e0ffe8;
+}
+#mante a {        /* actually they let me steal it */
+  color:                  #003621;
+  text-decoration-color:  #00824f;
+}
+#mante a:hover {  /* so its more like gifted by cvni1981.github.io */
+  color:                  #00824f;
 }
