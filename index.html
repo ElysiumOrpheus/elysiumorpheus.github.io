@@ -10,50 +10,55 @@
     <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preload custom font for performance -->
+    <!-- Preload custom font and GIF for performance -->
     <link rel="preload" href="fonts/jbm.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="images/background.gif" as="image">
 </head>
 <body>
+    <!-- Background overlay for semi-transparent GIF -->
+    <div class="background-overlay"></div>
+
     <!-- Main content -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Welcome to Elysium Orpheus</h1>
-        <p>A sleek, modern portfolio showcasing my projects.</p>
-    </header>
+    <div class="content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Welcome to Elysium Orpheus</h1>
+            <p>A sleek, modern portfolio showcasing my projects.</p>
+        </header>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Project 1 description goes here. This section can include images, descriptions, and links to GitHub or live demos.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Project 2 description goes here.</p>
-        </div>
-        <!-- Add more project cards as needed -->
-    </section>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Project 1 description goes here. This section can include images, descriptions, and links to GitHub or live demos.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Project 2 description goes here.</p>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am Orpheus, a developer and creator working on modern, sleek designs and innovative projects. This portfolio is a showcase of my ongoing work.</p>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Orpheus, a developer and creator working on modern, sleek designs and innovative projects. This portfolio is a showcase of my ongoing work.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you want to get in touch, feel free to <a href="mailto:youremail@example.com">email me</a> or connect with me on <a href="#">LinkedIn</a>.</p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you want to get in touch, feel free to <a href="mailto:youremail@example.com">email me</a> or connect with me on <a href="#">LinkedIn</a>.</p>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Elysium Orpheus. All rights reserved.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Elysium Orpheus. All rights reserved.</p>
+        </footer>
+    </div>
 
     <!-- Include JavaScript if needed -->
     <script src="script.js"></script>
