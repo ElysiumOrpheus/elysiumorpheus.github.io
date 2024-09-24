@@ -6,7 +6,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-image: url('images/bg.gif');
+  background-image: url('images/background.gif');
   background-size: 40px 40px;
   background-repeat: repeat;
   color: #d3c6aa;
