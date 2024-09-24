@@ -9,13 +9,14 @@
 /* Apply the custom font globally */
 body {
     font-family: 'JBM', sans-serif;
-    background-image: url('images/background.jpg');
+    background-image: url('images/background.jpg'); /* Ensure correct path */
     background-size: cover; /* Ensures the background covers the entire page */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0;
     padding: 0;
     height: 100vh; /* Ensures the background takes up the full viewport height */
+    width: 100vw; /* Ensures it covers the full viewport width */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,19 +27,4 @@ h1, h2, p {
     margin: 20px;
     text-align: center;
     color: white;
-}
-
-/* Additional styling for elements as needed */
-button {
-    font-family: 'JBM', sans-serif;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #555;
 }
