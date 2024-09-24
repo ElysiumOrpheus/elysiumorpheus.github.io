@@ -10,15 +10,14 @@
     <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preload custom font and GIF for performance -->
+    <!-- Preload custom font for performance -->
     <link rel="preload" href="fonts/jbm.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="images/background.gif" as="image">
 </head>
 <body>
-    <!-- Background overlay for semi-transparent GIF -->
-    <div class="background-overlay"></div>
+    <!-- The GIF overlay layer -->
+    <div id="gif-overlay"></div>
 
-    <!-- Main content -->
+    <!-- Main content container, which will be in front of both background layers -->
     <div class="content">
         <header>
             <nav>
@@ -53,12 +52,12 @@
             <h2>Contact</h2>
             <p>If you want to get in touch, feel free to <a href="mailto:youremail@example.com">email me</a> or connect with me on <a href="#">LinkedIn</a>.</p>
         </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Elysium Orpheus. All rights reserved.</p>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elysium Orpheus. All rights reserved.</p>
+    </footer>
 
     <!-- Include JavaScript if needed -->
     <script src="script.js"></script>
