@@ -9,7 +9,7 @@
 /* Apply the custom font globally */
 body {
     font-family: 'JBM', sans-serif;
-    background-image: url('images/two_forests_everforest.png');
+    background-image: url('images/background.jpg');
     background-size: cover; /* Ensures the background covers the entire page */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
