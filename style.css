@@ -83,14 +83,18 @@ a:active {
 
 }
 .img {
-  border: 5px solid #a7c080; /* Same border color as paragraph for consistency */
-  padding: 10px; /* Add padding inside the border */
-  background-color: #323c41; /* Same grey background color */
-  box-shadow: 8px 8px #3a454a; /* Same shadow as paragraph */
-  display: block; /* Ensures image behaves like a block-level element */
-  margin: 20px auto; /* Center the image with space around it */
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto; /* Maintains the aspect ratio */
+  border: 5px solid #a7c080; /* Creates the border around the div */
+  padding: 10px; /* Adds padding inside the border */
+  background-color: #323c41; /* Grey background color */
+  box-shadow: 8px 8px #3a454a; /* Adds shadow to the div */
+  display: block; /* Makes sure the div behaves like a block-level element */
+  margin: 20px auto; /* Centers the div with spacing */
+  max-width: 100%; /* Restricts the width of the div */
+}
+
+.img img {
+  width: 100%; /* Makes the image responsive inside the div */
+  height: auto; /* Keeps the image’s aspect ratio */
 }
 
 @keyframes marquee-veryfast {
