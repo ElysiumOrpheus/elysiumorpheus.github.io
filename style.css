@@ -80,6 +80,17 @@ a:active {
 
   /* Adds a box shadow to the paragraph */
   box-shadow: 8px 8px #3a454a;
+
+}
+.img {
+  border: 5px solid #a7c080; /* Same border color as paragraph for consistency */
+  padding: 10px; /* Add padding inside the border */
+  background-color: #323c41; /* Same grey background color */
+  box-shadow: 8px 8px #3a454a; /* Same shadow as paragraph */
+  display: block; /* Ensures image behaves like a block-level element */
+  margin: 20px auto; /* Center the image with space around it */
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintains the aspect ratio */
 }
 
 @keyframes marquee-veryfast {
