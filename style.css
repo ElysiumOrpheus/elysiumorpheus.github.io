@@ -1,127 +1,171 @@
 @font-face {
-  font-family:            'jbm';
-  src:                    url('jbm.woff2');
+  /* Defines a custom font called 'jbm', using a WOFF2 file */
+  font-family: 'jbm';
+  src: url('jbm.woff2');
 }
+
 html {
-  background-image:       url('images/background.gif');
-  background-repeat:      repeat;
-  background-size:        40px 40px;
-  color:                  #d3c6aa;
-  font-family:            'jbm';
+  /* Background image for the entire HTML document, repeated in a 40x40px grid */
+  background-image: url('images/background.gif');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+
+  /* Sets text color and font family for the entire HTML document */
+  color: #d3c6aa;
+  font-family: 'jbm';
 }
+
 body {
-  margin:                 0 0;
+  /* Removes default margin for the body */
+  margin: 0 0;
 }
 
-
-/* unvisited link */
+/* Styling for unvisited links */
 a:link {
-  color:                  #7fbbb3;
+  color: #7fbbb3;
 }
+
+/* Styling for visited links */
 a:visited {
-  color:                  #83c092;
+  color: #83c092;
 }
+
+/* Styling for hovered links */
 a:hover {
-  color:                  #d699b6;
+  color: #d699b6;
 }
+
+/* Styling for active links */
 a:active {
-  color:                  #e67e80;
+  color: #e67e80;
 }
 
-.bg { 
-  background-image:       url('images/two_forests_everforest.png');
-  background-repeat:      repeat-y;
-  background-size:        100% 200%;
-  mix-blend-mode:         overlay;
-  position:               fixed;
-  top:                    0;
-  bottom:                 0;
-  left:                   0;
-  right:                  0;
-  z-index:                -10;
+.bg {
+  /* Fixed background image that covers the full screen vertically, repeating on the y-axis */
+  background-image: url('images/two_forests_everforest.png');
+  background-repeat: repeat-y;
+  background-size: 100% 200%;
+
+  /* Blend the background with overlay for a nice effect */
+  mix-blend-mode: overlay;
+
+  /* Positions the background fixed behind all other elements */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10; /* Makes sure it's in the background */
 }
 
-.container { /* stolen from bucketfish.me */
-  max-width:              768px;
-  margin:                 10px auto;
-  padding:                0 10px;
+.container {
+  /* Max width for content, centered with padding */
+  max-width: 768px;
+  margin: 10px auto;
+  padding: 0 10px;
 }
 
 .paragraph {
-  border:                 5px solid #a7c080;
-  padding:                15px;
-  margin-bottom:          20px; 
-  position:               relative;
-  background-color:       #323c41;
-  overflow:               hidden;
-  box-shadow:             8px 8px #3a454a;
+  /* Creates a border around paragraphs with padding and a shadow */
+  border: 5px solid #a7c080;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  
+  /* Background color for paragraphs */
+  background-color: #323c41;
+
+  /* Ensures content won't overflow the paragraph box */
+  overflow: hidden;
+
+  /* Adds a box shadow to the paragraph */
+  box-shadow: 8px 8px #3a454a;
 }
 
 @keyframes marquee-veryfast {
+  /* Defines a marquee animation that moves an element from right to left */
   0% {
-    -moz-transform:       translateX(100%);
-    -webkit-transform:    translateX(100%);
-    transform:            translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
-    -moz-transform:       translateX(-100%);
-    -webkit-transform:    translateX(-100%);
-    transform:            translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 .marquee-veryfast {
-  width:                  100%;
-  animation:              marquee-veryfast 10s linear infinite;
+  /* Applies the fast-moving marquee animation to an element */
+  width: 100%;
+  animation: marquee-veryfast 10s linear infinite;
 }
 
 .yellow {
-  color:                  #dbbc7f;
+  /* Yellow text color for elements with this class */
+  color: #dbbc7f;
 }
 
 #navigation {
-  position:               absolute;
-  top:                    15px;
-  right:                  15px;
+  /* Positions the navigation absolutely in the top-right corner */
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 p, h1, h2, h3 {
-  margin:                 0%;
+  /* Removes default margins for paragraphs and headers */
+  margin: 0%;
 }
 
 #john {
-  margin:                 0% auto;
-  box-shadow:             8px 8px #3a454a;
+  /* Centers an element and adds a box shadow to it */
+  margin: 0% auto;
+  box-shadow: 8px 8px #3a454a;
 }
 
 #mante table {
-  width:                  100%;
+  /* Sets the width of the table to fill its container */
+  width: 100%;
 }
+
 #mante tbody tr .webring-prev {
-  width:                  25%;
-  text-align:             right;
+  /* Sets the width and alignment for previous link in table row */
+  width: 25%;
+  text-align: right;
 }
+
 #mante tbody tr .webring-info {
-  width:                  50%;
-  text-align:             center;
+  /* Sets the width and alignment for info in table row */
+  width: 50%;
+  text-align: center;
 }
+
 #mante tbody tr .webring-next {
-  width:                  25%;
-  text-align:             left;
+  /* Sets the width and alignment for next link in table row */
+  width: 25%;
+  text-align: left;
 }
-#mante {          /* stolen from cvni1981.github.io */
-  border:                 solid 1px #003621;
-  border-radius:          8px;
-  margin-bottom:          8px;
-  box-shadow:             2px 2px #63b695;
-  padding:                8px; 
-  color:                  #003621; 
-  background-color:       #e0ffe8;
+
+#mante {
+  /* Creates a styled border and background for the webring section */
+  border: solid 1px #003621;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 2px 2px #63b695;
+  padding: 8px;
+  color: #003621;
+  background-color: #e0ffe8;
 }
-#mante a {        /* actually they let me steal it */
-  color:                  #003621;
-  text-decoration-color:  #00824f;
+
+#mante a {
+  /* Styles links within the webring section */
+  color: #003621;
+  text-decoration-color: #00824f;
 }
-#mante a:hover {  /* so its more like gifted by cvni1981.github.io */
-  color:                  #00824f;
+
+#mante a:hover {
+  /* Changes link color when hovered in the webring section */
+  color: #00824f;
 }
