@@ -42,7 +42,7 @@ a:active {
 
 .bg {
   /* Fixed background image that covers the full screen vertically, repeating on the y-axis */
-  background-image: url('images/two_forests_everforest.png');
+  background-image: url('images/background.png');
   background-repeat: repeat-y;
   background-size: 100% 200%;
 
