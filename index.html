@@ -2,76 +2,129 @@
 <html>
   <head>
     <title>motan's website</title>
-    <link 
-      rel="icon" 
-      type="image/x-icon" 
-      href="favicon.ico"
-    >
-    <link 
-      rel="stylesheet" 
-      href="style.css"
-    >
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <style>
       #blahaj {
         animation: spin 0.1s linear infinite;
         height: 1em;
       }
+
       @keyframes spin {
-        from { transform: rotate(0deg  ); }
-        to   { transform: rotate(360deg); }
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Styles for the video and overlay */
+      #videoContainer {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #videoElement {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      #clickableOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+      }
+
+      .half {
+        flex: 1;
+        height: 100%;
+      }
+
+      .yes {
+        background-color: rgba(0, 255, 0, 0.2);
+      }
+
+      .no {
+        background-color: rgba(255, 0, 0, 0.2);
+      }
+
+      #message {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        z-index: 20;
       }
     </style>
-    <script
-      type="module"
-      src="script.js"
-    ></script> 
+    <script type="module" src="script.js"></script> 
     <!-- discord embed config -->
-    <meta property="og:site_name"   content="motan's website">
-    <meta property="og:url"         content="https://motan.gay">
-    <meta property="og:title"       content="~~ motan's website ~~">
+    <meta property="og:site_name" content="motan's website">
+    <meta property="og:url" content="https://motan.gay">
+    <meta property="og:title" content="~~ motan's website ~~">
     <meta property="og:description" content="this is motan's website i guess">
-    <meta property="og:type"        content="website">
-    <meta property="og:image"       content="https://motan.gay/images/akesi sewi motan.png">
-
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://motan.gay/images/akesi sewi motan.png">
   </head>
+
   <body>
     <div class="bg"></div>
+    <div id="videoContainer">
+      <video id="videoElement" autoplay muted>
+        <source src="/mnt/data/8B13C97C-9117-44E2-86EF-440EF97B0C35.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div id="clickableOverlay">
+        <div class="half yes" onclick="handleClick('yes')"></div>
+        <div class="half no" onclick="handleClick('no')"></div>
+      </div>
+      <div id="message">Click on Yes or No</div>
+    </div>
+
     <div class="container">
-      
       <div class="paragraph">
         <h1>motan's website</h1>
-        <p 
-          class="marquee-veryfast" 
-          id="change"
-        >turn on javascript bitchass</p>
+        <p class="marquee-veryfast" id="change">turn on javascript bitchass</p>
         <p id="navigation"><a href="changelog">changelog</a></p>
       </div>
-      
+
       <div class="paragraph">
         <h2>introduction</h2>
         <p>
-        * hello! my name's <span class="yellow">motan</span>. i'm an amateur programmer, musician, <a href="https://en.wikipedia.org/wiki/Toki_Pona" target="_blank" rel="noopener noreferrer">tokiponist</a> and linux user.<br>
+          * hello! my name's <span class="yellow">motan</span>. i'm an amateur programmer, musician, <a href="https://en.wikipedia.org/wiki/Toki_Pona" target="_blank" rel="noopener noreferrer">tokiponist</a> and linux user.<br>
         </p>
       </div>
 
       <div class="paragraph">
         <h2>projects</h2>
         <p>
-        * <a href="polcyr">polcyr, a cyrillic orthography for polish</a><br>
-        * <a href="https://github.com/kijemotan/flipnote-gothic">flipnote gothic, a tiny bitmap font</a><br>
-        * <a href="https://github.com/kijemotan/isi">isi, a text editor for the commander x16</a><br>
-		* i also put my music on <a href="https://themotan.bandcamp.com">bandcamp</a> and <a href="https://youtube.com/@kijete">youtube</a>, and i do <a href="https://battleofthebits.com/barracks/Profile/the+motan/">battle of the bits</a>!<br>
+          * <a href="polcyr">polcyr, a cyrillic orthography for polish</a><br>
+          * <a href="https://github.com/kijemotan/flipnote-gothic">flipnote gothic, a tiny bitmap font</a><br>
+          * <a href="https://github.com/kijemotan/isi">isi, a text editor for the commander x16</a><br>
+          * i also put my music on <a href="https://themotan.bandcamp.com">bandcamp</a> and <a href="https://youtube.com/@kijete">youtube</a>, and i do <a href="https://battleofthebits.com/barracks/Profile/the+motan/">battle of the bits</a>!<br>
         </p>
       </div>
 
       <div class="paragraph">
         <h2>contact</h2>
         <p>
-        * discord: motan.<br>
-        * tumblr: <a href="https://tumblr.motan.gay" target="_blank" rel="noopener noreferrer">the-motan</a><br>
-        * cohost: <a href="https://cohost.org/motan" target="_blank" rel="noopener noreferrer">@motan</a><br>
-        * ziv: <a href="https://zenius-i-vanisher.com/v5.2/user?userid=25162" target="_blank" rel="noopener noreferrer">motan</a><br>
-        * email: (first part of domain name)[at sign](domain name)</a>
+          * discord: motan.<br>
+          * tumblr: <a href="https://tumblr.motan.gay" target="_blank" rel="noopener noreferrer">the-motan</a><br>
+          * cohost: <a href="https://cohost.org/motan" target="_blank" rel="noopener noreferrer">@motan</a><br>
+          * ziv: <a href="https://zenius-i-vanisher.com/v5.2/user?userid=25162" target="_blank" rel="noopener noreferrer">motan</a><br>
+          * email: (first part of domain name)[at sign](domain name)
         </p>
       </div>
 
