@@ -110,13 +110,14 @@ a:active {
     transform: translateX(-100%);
   }
 }
-
 .marquee-veryfast {
-  /* Applies the fast-moving marquee animation to an element */
-  width: 100%;  /* Adjust this width as needed to fit your content */
+  width: 100%;  /* Full width of the parent container */
   animation: marquee-veryfast 10s linear infinite;
-  white-space: nowrap;  /* Prevents the text from wrapping onto the next line */
+  white-space: nowrap;  /* Prevents the text from wrapping */
+  overflow: hidden;  /* Hides any overflowed content */
+  display: block;  /* Ensures it behaves as a block element, filling the width */
 }
+
 
 .yellow {
   /* Yellow text color for elements with this class */
