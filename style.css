@@ -113,8 +113,9 @@ a:active {
 
 .marquee-veryfast {
   /* Applies the fast-moving marquee animation to an element */
-  width: 100%;
+  width: 100%;  /* Adjust this width as needed to fit your content */
   animation: marquee-veryfast 10s linear infinite;
+  white-space: nowrap;  /* Prevents the text from wrapping onto the next line */
 }
 
 .yellow {
