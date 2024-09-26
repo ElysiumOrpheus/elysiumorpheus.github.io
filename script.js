@@ -4,7 +4,7 @@ const marqueeMsgs =
   "Icarus laughed as he fell. Threw his head back and yelled into the winds, arms spread wide, teeth bared to the world",
   "It's giving bozo...",
   "What the sigma",
-  "Born to goon, forced to edge"
+  "Born to goon, forced to edge",
   "Also try Terraria!"
 ]
 
