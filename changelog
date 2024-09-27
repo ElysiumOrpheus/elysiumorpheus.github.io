@@ -1,1 +1,40 @@
-/# temp
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changelog</title>
+    <link 
+      rel="icon" 
+      type="image/x-icon" 
+      href="favicon.ico"
+    >
+    <link 
+      rel="stylesheet" 
+      href="style.css"
+    >
+    <style>
+      #blahaj {
+        animation: spin 0.1s linear infinite;
+        height: 1em;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg  ); }
+        to   { transform: rotate(360deg); }
+      }
+    </style>
+<script src="script.js" defer></script>
+
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="container">
+      <div class="paragraph">
+        <h1>Changelog</h1>
+        <p 
+          class="marquee-veryfast" 
+          id="change"
+        >turn on javascript fatso</p>
+        <p id="navigation"><a href="changelog.html">changelog</a></p>
+      </div>
+
+  </body>
+</html>
