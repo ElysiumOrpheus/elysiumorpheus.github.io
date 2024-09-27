@@ -22,12 +22,12 @@ body {
 
 /* Styling for unvisited links */
 a:link {
-  color: #7fbbb3;
+  color: #2187b9;
 }
 
 /* Styling for visited links */
 a:visited {
-  color: #83c092;
+  color: #2187b9;
 }
 
 /* Styling for hovered links */
