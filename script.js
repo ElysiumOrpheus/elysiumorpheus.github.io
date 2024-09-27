@@ -5,7 +5,8 @@ const marqueeMsgs =
   "It's giving bozo...",
   "What the sigma",
   "Born to goon, forced to edge",
-  "Also try Terraria!"
+  "Also try Terraria!",
+  "What we do in life echoes in eternity - Maxiumus"
 ]
 
 const marquee = document.getElementById("change");
