@@ -6,7 +6,10 @@ const marqueeMsgs =
   "What the sigma",
   "Born to goon, forced to edge",
   "Also try Terraria!",
-  "What we do in life echoes in eternity - Maxiumus"
+  "What we do in life echoes in eternity - Maxiumus",
+  "Roll for initiative....",
+  "The supreme art of war is to subdue the enemy without fighting - Sun Tzu",
+  "How do I code this...?"
 ]
 
 const marquee = document.getElementById("change");
