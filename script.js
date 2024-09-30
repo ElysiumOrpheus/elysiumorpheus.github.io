@@ -23,7 +23,7 @@ marquee.addEventListener('animationiteration', splash);
 splash();
 
 // Last.fm Integration
-const apiKey = 'd89c0c0f384af07f5453c41f88934340';
+const apiKey = 'API_KEY';
 const username = 'Darsolos';
 
 async function fetchLatestSong() {
