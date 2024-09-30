@@ -23,8 +23,8 @@ marquee.addEventListener('animationiteration', splash);
 splash();
 
 // Last.fm Integration
-const apiKey = 'YOUR_API_KEY';
-const username = 'YOUR_LASTFM_USERNAME';
+const apiKey = 'd89c0c0f384af07f5453c41f88934340';
+const username = 'Darsolos';
 
 async function fetchLatestSong() {
     const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1`);
