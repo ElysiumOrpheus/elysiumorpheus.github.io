@@ -8,7 +8,8 @@ const marqueeMsgs = [
   "What we do in life echoes in eternity - Maxiumus",
   "Roll for initiative....",
   "The supreme art of war is to subdue the enemy without fighting - Sun Tzu",
-  "How do I code this...?"
+  "How do I code this...?",
+  "Dm me ur badges so I can add them"
 ];
 
 const marquee = document.getElementById("change");
